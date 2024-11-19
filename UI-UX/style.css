@@ -1,0 +1,260 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8ab37;
+    transition: background-color 0.5s ease;
+    font-family: "Comfortaa";
+    cursor: none;
+}
+
+ol {
+    padding-right: 600px;
+    padding-left: 60px;
+    font-size: 20px;
+}
+
+p {
+    padding-right: 600px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.future-p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.future-ul {
+    padding-right: 20px;
+    padding-left: 60px;
+    font-size: 20px;
+}
+
+h3 {
+    padding-left: 20px;
+    margin: 0 0;
+    font-size: 22px
+}
+
+aside {
+    position: top;
+    float: right;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.link-author {
+    color: #d43786;
+}
+
+.link-author:visited {
+    color: #500229;
+}
+
+.lit-link {
+    color: #d81616;
+}
+
+.lit-link:visited {
+    color: #770c0c;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1400px;
+    margin: 0 auto;
+    transition: background-color 0.5s ease;
+    background-color: #FFF3E0;
+}
+
+.banner {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.banner.fade-out {
+    opacity: 0;
+}
+
+header {
+    margin: 30px 0 0 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+    width: 1400px;
+    align-items: center;
+
+}
+
+.tabs {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+.tabs li {
+    padding: 15px 20px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+    cursor: none;
+}
+
+.tabs li:hover,
+.tabs li.active {
+    background-color: #4CAF50;
+    cursor: none;
+}
+
+
+
+#content {
+    padding: 20px;
+}
+
+
+
+/* Image on the right */
+.image-container {
+    flex-shrink: 0;
+    /* Prevents the image from shrinking */
+    max-width: 300px;
+    /* Optional: Set a maximum width for images */
+
+}
+
+.image-container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+}
+
+
+
+.tab-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.tabs li.active {
+    background-color: #4CAF50;
+}
+
+.tab-content.active-tab {
+    display: block;
+    opacity: 1;
+}
+
+
+/* For the aside containing images */
+.tab-content aside {
+    max-width: 40%;
+}
+
+
+
+figcaption {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Кольори body */
+body[data-tab="about-webdesign"] {
+    background-color: #df911c;
+}
+
+body[data-tab="about-uxui"] {
+    background-color: #5cae60;
+}
+
+body[data-tab="importance"] {
+    background-color: #3d8ac9;
+}
+
+body[data-tab="future"] {
+    background-color: #ab4abc;
+}
+
+body[data-tab="literature"] {
+    background-color: #d81616;
+}
+
+body[data-tab="authorship"] {
+    background-color: #d43786;
+}
+
+/* Кольори обгортки */
+body[data-tab="about-webdesign"] .wrapper {
+    background-color: #FFF3E0;
+
+}
+
+body[data-tab="about-uxui"] .wrapper {
+    background-color: #E8F5E9;
+
+}
+
+body[data-tab="importance"] .wrapper {
+    background-color: #E3F2FD;
+
+}
+
+body[data-tab="future"] .wrapper {
+    background-color: #F3E5F5;
+
+}
+
+body[data-tab="literature"] .wrapper {
+    background-color: #ffe7e7
+}
+
+body[data-tab="authorship"] .wrapper {
+    background-color: #fbe7ef;
+
+}
+
+
+#cursor {
+    position: fixed;
+    size: 50px;
+    top: -15px;
+    left: -15px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999;
+    mix-blend-mode: difference;
+}
+
+
+
+* {
+    margin: 0;
+    cursor: none;
+}
