@@ -56,6 +56,7 @@ aside {
     color: #d81616;
 }
 
+
 .lit-link:visited {
     color: #770c0c;
 }
@@ -137,8 +138,16 @@ nav {
     height: auto;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    pointer-events: none;
+    transition: transform 0.3s ease-in-out;
+
 }
+
+.image-container img:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+
 
 
 
@@ -237,6 +246,7 @@ body[data-tab="authorship"] .wrapper {
 
 }
 
+/* CURSOR */
 
 #cursor {
     position: fixed;
@@ -253,8 +263,63 @@ body[data-tab="authorship"] .wrapper {
 }
 
 
-
 * {
     margin: 0;
     cursor: none;
+}
+
+/* HIGHLIGHT */
+@keyframes highlight {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: -100%;
+    }
+}
+
+.highlight {
+    animation-name: highlight;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+    background-size: 200% 100%;
+    display: inline-block;
+    /* Ensures background aligns with the text */
+    padding: 0.1em 0
+}
+
+
+body[data-tab="about-webdesign"] .highlight {
+    background-image: linear-gradient(to right, #FFF3E0 50%, rgba(232, 158, 62, 0.764) 50%);
+
+}
+
+body[data-tab="about-uxui"] .highlight {
+    background-image: linear-gradient(to right, #E8F5E9 50%, rgba(73, 232, 62, 0.764) 50%);
+
+}
+
+body[data-tab="importance"] .highlight {
+    background-image: linear-gradient(to right, #E3F2FD 50%, rgba(62, 158, 232, 0.764) 50%);
+
+}
+
+body[data-tab="future"] .highlight {
+    background-image: linear-gradient(to right, #F3E5F5 50%, rgba(164, 62, 232, 0.764) 50%);
+
+}
+
+body[data-tab="literature"] .highlight {
+    background-image: linear-gradient(to right, #ffe7e7 50%, rgba(232, 62, 62, 0.764) 50%);
+}
+
+body[data-tab="authorship"] .highlight {
+    background-image: linear-gradient(to right, #fbe7ef 50%, rgba(232, 62, 181, 0.764) 50%);
+
+}
+
+.fade.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
